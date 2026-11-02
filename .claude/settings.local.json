@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pdftotext -layout \"/Users/dipeshrajadhikari/Documents/CV/CV_Dipesh_Raj_Adhikari.pdf\" -)",
+      "Bash(python3 -I -c ' *)",
+      "Bash(osascript -l JavaScript -e 'ObjC.import\\(\"PDFKit\"\\); function run\\(a\\){var d=$.PDFDocument.alloc.initWithURL\\($.NSURL.fileURLWithPath\\(a[0]\\)\\); return d.string.js;}' \"/Users/dipeshrajadhikari/Documents/CV/CV_Dipesh_Raj_Adhikari.pdf\")",
+      "WebFetch(domain:dipeshadhi.github.io)",
+      "Bash(curl -s \"https://api.github.com/users/DipeshAdhi/repos?per_page=100&sort=updated\")",
+      "Bash(python3 -I -c \"import json,sys; [print\\(r['name'],'|',r['description'],'|',r['language'],'|',r['html_url'],'|',r.get\\('homepage'\\)\\) for r in json.load\\(sys.stdin\\)]\")",
+      "Bash(python3 -m http.server 8123)"
+    ]
+  }
+}

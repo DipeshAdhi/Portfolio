@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dipesh Raj Adhikari · Product Hub</title>
+  <meta name="description" content="Lecturer, programme coordinator and product builder in Kathmandu. Backlog, shipped work, teaching and roadmap.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- hand-drawn wobble used by every sketch on the page -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="rough">
+    <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4"/>
+    <feDisplacementMap in="SourceGraphic" scale="2.6"/>
+  </filter>
+</svg>
+
+<header class="topbar">
+  <a class="brand" href="#top">dipesh.adhikari</a>
+  <nav class="nav" aria-label="Sections">
+    <a href="#tool">[Hybrid Tool]</a>
+    <a href="#experience">[Experience]</a>
+    <a href="#backlog">[The Backlog]</a>
+    <a href="#thesis">[Thesis]</a>
+    <a href="#hub">[Lecturer Hub]</a>
+    <a href="#roadmap">[Roadmap]</a>
+    <a href="#contact">[Contact]</a>
+  </nav>
+  <span class="ver" title="Updated Nov 2026">v1.0</span>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <svg class="sketch sketch-left" viewBox="0 0 200 230" aria-hidden="true">
+      <g filter="url(#rough)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <rect x="6" y="6" width="188" height="218" rx="4"/>
+        <rect x="16" y="16" width="26" height="22"/><path d="M16 16l26 22M42 16L16 38"/>
+        <path d="M150 22h30M150 28h30M150 34h30"/>
+        <rect x="16" y="50" width="168" height="62"/><path d="M16 50l168 62M184 50L16 112"/>
+        <rect x="16" y="124" width="12" height="12"/><path d="M36 130h90"/>
+        <rect x="16" y="144" width="12" height="12"/><path d="M36 150h120"/>
+        <rect x="16" y="164" width="12" height="12"/><path d="M36 170h70"/>
+        <rect x="16" y="188" width="76" height="24"/><path d="M28 200h52"/>
+      </g>
+    </svg>
+
+    <div class="hero-copy">
+      <p class="eyebrow">Kathmandu · Lecturer · Programme coordinator · Builder</p>
+      <h1>I run my career, my teaching<br>and my side projects like a product.</h1>
+      <p class="lede">
+        I'm Dipesh. I teach software engineering, AI and databases at Islington College,
+        coordinate academic programmes there, and just finished an MSc in IT &amp; Applied Security
+        (London Met). Below is the actual backlog: what's shipped, what's in progress,
+        and the one thing I'm building that isn't public yet.
+      </p>
+      <div class="hero-meta">
+        <span><b>5+</b> yrs between business &amp; IT teams</span>
+        <span><b>30+</b> student projects supervised / yr</span>
+        <span><b>100+</b> modules planned each cycle</span>
+      </div>
+    </div>
+
+    <svg class="sketch sketch-right" viewBox="0 0 200 230" aria-hidden="true">
+      <g filter="url(#rough)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <rect x="6" y="6" width="188" height="218" rx="4"/>
+        <path d="M6 30h188"/><circle cx="18" cy="18" r="4"/><circle cx="32" cy="18" r="4"/>
+        <path d="M60 30v194M100 30v194M140 30v194"/>
+        <path d="M6 70h188M6 110h188M6 150h188M6 190h188"/>
+        <rect x="64" y="76" width="32" height="28"/><path d="M64 76l32 28M96 76l-32 28"/>
+        <rect x="104" y="116" width="32" height="68"/><path d="M110 130h20M110 140h14"/>
+        <rect x="144" y="156" width="44" height="28"/><path d="M150 168h30"/>
+        <path d="M16 46h34M16 86h30M16 126h36M16 166h26"/>
+      </g>
+    </svg>
+
+    <div class="sticky sticky-hero" aria-hidden="true">
+      this week:<br>
+      → pilot teams for the tool<br>
+      → Daraz teardown next<br>
+      → <s>MSc thesis</s> ✓
+    </div>
+  </section>
+
+  <!-- 1. HYBRID TOOL -->
+  <section id="tool" class="block">
+    <div class="block-head">
+      <span class="num">01</span>
+      <h2>Sprintcal — a Jira × calendar hybrid</h2>
+      <span class="pill pill-lock"><i class="lock" aria-hidden="true"></i> Private preview</span>
+    </div>
+
+    <div class="tool-grid">
+      <div class="tool-copy">
+        <p>
+          Every team I've coordinated had the same split: tasks live in Jira or Trello,
+          time lives in Google Calendar, and nobody can see whether the sprint actually
+          <em>fits</em> in the week. Sprintcal puts sprint tickets straight onto a calendar
+          so story points turn into time blocks you can see clash.
+        </p>
+        <ul class="ticks">
+          <li>Drag a ticket onto the week → it becomes a time block</li>
+          <li>Over-committed days go red before standup, not after the retro</li>
+          <li>Board, calendar and a mixed view of the same data</li>
+        </ul>
+        <p class="muted small">
+          The prototype runs on Vercel behind a password while I test it with a few pilot
+          teams. I'm not posting the link publicly yet; happy to walk you through it.
+        </p>
+        <div class="row">
+          <a class="btn" href="mailto:dipeshrajadhikari@gmail.com?subject=Sprintcal%20walkthrough">Request a 20-min walkthrough</a>
+          <a class="btn btn-ghost" href="#roadmap">See what's left before launch ↓</a>
+        </div>
+      </div>
+
+      <!-- Concept mock, built in HTML. Not the real product. -->
+      <div class="mock" aria-label="Concept mock of the hybrid board and calendar view">
+        <div class="mock-bar">
+          <span class="dots"><i></i><i></i><i></i></span>
+          <span class="mock-url">sprintcal.vercel.app · 🔒</span>
+        </div>
+        <div class="mock-tabs" role="tablist">
+          <button role="tab" data-view="board">Board</button>
+          <button role="tab" data-view="cal">Calendar</button>
+          <button role="tab" data-view="hybrid" aria-selected="true">Hybrid</button>
+        </div>
+        <div class="mock-body" data-current="hybrid">
+          <aside class="mock-backlog">
+            <p class="mlabel">Sprint 14 · 21 pts</p>
+            <div class="tk" style="--c:var(--blue)">Auth flow <b>5</b></div>
+            <div class="tk" style="--c:var(--green)">Export CSV <b>3</b></div>
+            <div class="tk" style="--c:var(--yellow)">Onboarding copy <b>2</b></div>
+            <div class="tk" style="--c:var(--red)">Calendar sync <b>8</b></div>
+            <div class="tk" style="--c:var(--blue)">Bug: TZ offset <b>3</b></div>
+          </aside>
+          <div class="mock-cal">
+            <div class="dh">Mon</div><div class="dh">Tue</div><div class="dh">Wed</div><div class="dh">Thu</div><div class="dh">Fri</div>
+            <div class="dc"><span class="ev" style="--c:var(--blue)">Auth flow</span></div>
+            <div class="dc"><span class="ev" style="--c:var(--blue)">Auth flow</span><span class="ev" style="--c:var(--green)">CSV</span></div>
+            <div class="dc over"><span class="ev" style="--c:var(--red)">Cal sync</span><span class="ev" style="--c:var(--red)">Cal sync</span><span class="ev" style="--c:var(--yellow)">Copy</span></div>
+            <div class="dc"><span class="ev" style="--c:var(--red)">Cal sync</span></div>
+            <div class="dc"><span class="ev" style="--c:var(--blue)">TZ bug</span></div>
+          </div>
+          <div class="mock-board">
+            <div><p class="mlabel">To do</p><div class="tk" style="--c:var(--red)">Calendar sync</div><div class="tk" style="--c:var(--blue)">TZ offset</div></div>
+            <div><p class="mlabel">Doing</p><div class="tk" style="--c:var(--blue)">Auth flow</div><div class="tk" style="--c:var(--yellow)">Onboarding</div></div>
+            <div><p class="mlabel">Done</p><div class="tk" style="--c:var(--green)">Export CSV</div></div>
+          </div>
+        </div>
+        <div class="mock-lock">
+          <i class="lock lock-lg" aria-hidden="true"></i>
+          <p>Live prototype is invite-only<br><span>concept mock above · real build on request</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. EXPERIENCE, laid out like the PM Ready project tool -->
+  <section id="experience" class="block">
+    <div class="block-head">
+      <span class="num">02</span>
+      <h2>Experience — tracked in my own PM tool</h2>
+      <span class="muted small">same layout as the PM Ready project tool</span>
+    </div>
+
+    <div class="app">
+      <aside class="app-side">
+        <div class="app-brand">PM Ready<small>Project Tool</small></div>
+        <p class="app-proj">Dipesh's career</p>
+        <span class="app-badge">Hybrid</span>
+        <nav class="app-nav" role="tablist" aria-label="Experience views">
+          <button role="tab" data-pane="overview" aria-selected="true">Overview</button>
+          <button role="tab" data-pane="roles">Roles <span class="app-count" id="role-count"></span></button>
+          <button role="tab" data-pane="timeline">Gantt chart</button>
+          <button role="tab" data-pane="skills">Skills</button>
+        </nav>
+        <a class="app-back" href="https://www.linkedin.com/in/dipesh-raj-adhikari-115b411a5/" target="_blank" rel="noopener">← Full profile on LinkedIn</a>
+      </aside>
+
+      <div class="app-main">
+        <header class="app-head">
+          <div>
+            <h3 id="pane-title">Overview</h3>
+            <small>Started 2020 · Kathmandu</small>
+          </div>
+          <span class="app-saved">Saved Nov 2026</span>
+        </header>
+
+        <div class="pane" data-pane="overview">
+          <div class="tiles">
+            <div class="tile"><b>5+</b><span>years linking business &amp; IT teams</span></div>
+            <div class="tile"><b>100+</b><span>academic modules planned per cycle</span></div>
+            <div class="tile"><b>30+</b><span>final-year projects supervised / yr</span></div>
+            <div class="tile"><b>3×</b><span>cut in programme resource needs</span></div>
+            <div class="tile"><b>50+</b><span>stakeholders aligned across teams</span></div>
+          </div>
+          <div class="app-card">
+            <h4>Current roles</h4>
+            <table class="app-table">
+              <thead><tr><th>Role</th><th>Since</th><th>Scope</th></tr></thead>
+              <tbody id="current-roles"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="pane" data-pane="roles" hidden>
+          <div class="app-card" id="role-list"></div>
+        </div>
+
+        <div class="pane" data-pane="timeline" hidden>
+          <div class="app-card">
+            <div class="gantt" id="gantt"></div>
+            <p class="gantt-key"><i class="k-work"></i> work <i class="k-edu"></i> education</p>
+          </div>
+        </div>
+
+        <div class="pane" data-pane="skills" hidden>
+          <div class="app-card skills">
+            <h4>Product &amp; strategy</h4>
+            <p><span>PRD authoring</span><span>Roadmapping</span><span>Prioritisation</span><span>User research</span><span>KPIs &amp; success metrics</span><span>Stakeholder alignment</span><span>Go-to-market</span><span>Agile / Scrum</span></p>
+            <h4>Technical</h4>
+            <p><span>Python (Pandas, NumPy, scikit-learn, TensorFlow)</span><span>PostgreSQL / MySQL / Oracle</span><span>ETL pipelines</span><span>System design</span><span>REST APIs</span><span>AWS</span><span>Docker</span><span>Git / CI-CD</span><span>Power BI</span></p>
+            <h4>Tools</h4>
+            <p><span>Jira</span><span>Trello</span><span>ClickUp</span><span>Confluence</span><span>Excel / Sheets</span><span>UML</span><span>Figma</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. BACKLOG -->
+  <section id="backlog" class="block">
+    <div class="block-head">
+      <span class="num">03</span>
+      <h2>The backlog — previous sprints &amp; case studies</h2>
+      <span class="muted small">click a card</span>
+    </div>
+
+    <div class="filters" role="group" aria-label="Filter cards">
+      <button class="chip" data-filter="all" aria-pressed="true">All</button>
+      <button class="chip" data-filter="product">Product</button>
+      <button class="chip" data-filter="build">Builds</button>
+      <button class="chip" data-filter="teach">Teaching</button>
+      <button class="chip" data-filter="ux">UX teardowns</button>
+    </div>
+
+    <div class="board" id="board">
+      <div class="col" data-col="todo"><h3>To do <span class="count"></span></h3></div>
+      <div class="col" data-col="doing"><h3>In progress <span class="count"></span></h3></div>
+      <div class="col" data-col="review"><h3>Live / shipped <span class="count"></span></h3></div>
+      <div class="col" data-col="done"><h3>Done <span class="count"></span></h3></div>
+    </div>
+  </section>
+
+  <!-- THESIS -->
+  <section id="thesis" class="block">
+    <div class="block-head">
+      <span class="num">04</span>
+      <h2>MSc thesis — routing support tickets with a small LLM + RL</h2>
+      <span class="pill pill-lock"><i class="lock" aria-hidden="true"></i> Code not public yet</span>
+    </div>
+
+    <p class="narrow">
+      An AI helpdesk that listens to a customer, works out intent and mood, scores priority,
+      and lets two Q-learning agents decide which department gets the ticket. Everything runs
+      locally on an Ollama-hosted small language model, so no customer audio leaves the building.
+      Admins can overrule the routing, and every correction is fed back as a reward signal.
+    </p>
+
+    <div class="pipe" role="list" aria-label="Pipeline">
+      <div class="stage" role="listitem"><small>input</small><b>Voice / text</b></div>
+      <span class="arrow" aria-hidden="true">→</span>
+      <div class="stage" role="listitem"><small>ASR</small><b>Whisper</b></div>
+      <span class="arrow" aria-hidden="true">→</span>
+      <div class="stage" role="listitem"><small>SLM · Ollama</small><b>Intent + sentiment</b></div>
+      <span class="arrow" aria-hidden="true">→</span>
+      <div class="stage" role="listitem"><small>scoring</small><b>Priority</b></div>
+      <span class="arrow" aria-hidden="true">→</span>
+      <div class="stage hl" role="listitem"><small>dual Q-learning</small><b>Dept. + queue</b></div>
+      <div class="loop" aria-hidden="true">
+        <span>↺ admin correction → reward</span>
+      </div>
+    </div>
+
+    <div class="thesis-grid">
+      <div class="note-card">
+        <h4>What I measured</h4>
+        <p>Routing accuracy, CSAT and speed-to-resolution, with tier-based data contracts between each stage.</p>
+      </div>
+      <div class="note-card">
+        <h4>Why local</h4>
+        <p>Privacy, latency and cost. A hosted LLM per call doesn't make sense for a small support desk.</p>
+      </div>
+      <div class="note-card">
+        <h4>Stack</h4>
+        <p>Django full-stack, Whisper, Ollama, scikit-learn sentiment, custom Q-learning agents, observable routing log.</p>
+      </div>
+      <div class="note-card locked">
+        <h4><i class="lock" aria-hidden="true"></i> Repo &amp; demo</h4>
+        <p>Private until the dissertation is through marking. Ask and I'll screen-share it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. LECTURER HUB -->
+  <section id="hub" class="block">
+    <div class="block-head">
+      <span class="num">05</span>
+      <h2>Lecturer hub</h2>
+    </div>
+
+    <div class="hub-grid">
+      <a class="course" href="https://dipeshadhi.github.io/PMP-Guide-/" target="_blank" rel="noopener">
+        <div class="course-top">
+          <span class="pill pill-free">Module 1 free</span>
+          <span class="muted small">live on GitHub Pages ↗</span>
+        </div>
+        <h3>PM Ready</h3>
+        <p>
+          The course I wish my students had before their first real project.
+          Eight modules, from <em>what a project is</em> to agile and change control.
+          Each one is a short lesson, a hands-on tool and a quick check, with a
+          readiness test at the end.
+        </p>
+        <div class="tools-row">
+          <span>WBS</span><span>RACI</span><span>CPM</span><span>Gantt</span><span>Scrum</span><span>DSDM</span><span>XP</span>
+        </div>
+        <p class="small muted">There's also a project tool built in: pick Predictive, Scrum, Kanban, XP, DSDM or Hybrid and actually run a project.</p>
+        <span class="go">Start module 1 →</span>
+      </a>
+
+      <div class="hub-side">
+        <a class="mini" href="https://dipeshadhi.github.io/SDLC-Teaching-/" target="_blank" rel="noopener">
+          <b>SDLC, interactively ↗</b>
+          <span>Traditional methodologies (waterfall, V-model, spiral) as clickable walkthroughs for my SE classes.</span>
+        </a>
+        <a class="mini" href="https://dipeshadhi.github.io/Learning_AI_LLM/" target="_blank" rel="noopener">
+          <b>Learning AI &amp; LLMs ↗</b>
+          <span>A curated map of the sites, tools and skills I point students to.</span>
+        </a>
+        <div class="mini plain">
+          <b>What I teach</b>
+          <span>Information Systems · Software Engineering · AI · Databases · Software Architecture · Design Patterns · UML · CI/CD</span>
+        </div>
+        <div class="mini plain">
+          <b>How I supervise</b>
+          <span>30+ final-year projects a year, each run as discovery → requirements → UML → build → test → deploy.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. ROADMAP -->
+  <section id="roadmap" class="block">
+    <div class="block-head">
+      <span class="num">06</span>
+      <h2>Roadmap — what has to be true before Sprintcal launches</h2>
+    </div>
+
+    <div class="road">
+      <div class="lane">
+        <h3>Now</h3>
+        <ul class="checks">
+          <li class="done">Working prototype (board + calendar + hybrid)</li>
+          <li class="done">Write the problem down in one sentence</li>
+          <li>Pilot with 3 small teams, watch them plan one sprint</li>
+          <li>Find out if time-blocking is the pain, or estimation is</li>
+        </ul>
+      </div>
+      <div class="lane">
+        <h3>Next</h3>
+        <ul class="checks">
+          <li>Two-way Google Calendar sync</li>
+          <li>Jira / Trello import (read-only first)</li>
+          <li>Usability test with non-PM users</li>
+          <li>Pricing test: free for 1 team, paid after</li>
+        </ul>
+      </div>
+      <div class="lane">
+        <h3>Later</h3>
+        <ul class="checks">
+          <li>Public beta</li>
+          <li>Team capacity &amp; leave planning</li>
+          <li>Mobile view (not a native app)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="constraints">
+      <div class="sticky sticky-flat">
+        <b>Constraint: money</b><br>
+        Bootstrapped from my teaching salary. Free tiers only (Vercel). Open to angel conversations once pilots say yes.
+      </div>
+      <div class="sticky sticky-flat sticky-pink">
+        <b>Trade-off I made</b><br>
+        Cut the native app. A responsive web view covers 90% of standups and saves months.
+      </div>
+      <div class="sticky sticky-flat sticky-blue">
+        <b>Constraint: time</b><br>
+        Built around a full teaching timetable, so scope is planned one week at a time.
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="block contact">
+    <div class="block-head">
+      <span class="num">07</span>
+      <h2>Contact / about</h2>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <p>
+          Right now I'm Academic Logistics Coordinator and a lecturer at Islington College.
+          In practice I'm the product owner for how 100+ modules get planned, resourced and
+          budgeted each cycle, and I get 12+ senior stakeholders to agree on the plan.
+          As programme coordinator I cut resource needs to a third by redesigning the process
+          around the data.
+        </p>
+        <p>
+          I'm looking for product roles where that mix helps: someone who can talk schema design
+          with engineers and budget variance with finance in the same afternoon.
+        </p>
+      </div>
+      <ul class="links">
+        <li><span>email</span><a href="mailto:dipeshrajadhikari@gmail.com">dipeshrajadhikari@gmail.com</a></li>
+        <li><span>github</span><a href="https://github.com/DipeshAdhi" target="_blank" rel="noopener">github.com/DipeshAdhi</a></li>
+        <li><span>linkedin</span><a href="https://www.linkedin.com/in/dipesh-raj-adhikari-115b411a5/" target="_blank" rel="noopener">in/dipesh-raj-adhikari</a></li>
+        <li><span>based</span>Kathmandu, Nepal</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <span>Built by hand, no template. Plain HTML/CSS/JS on GitHub Pages.</span>
+  <span>changelog: v1.0 · Nov 2026 · first public version</span>
+</footer>
+
+<dialog id="card-dialog">
+  <form method="dialog"><button class="x" aria-label="Close">×</button></form>
+  <div id="card-detail"></div>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
